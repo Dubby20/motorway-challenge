@@ -1,3 +1,6 @@
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/Dubby20/motorway-challenge/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Dubby20/motorway-challenge/tree/main)
+
+
 Install requirements:
  - docker (https://docs.docker.com/get-docker/)
 

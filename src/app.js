@@ -43,8 +43,6 @@ const createApp = ({ container }) => {
         ...error.extraAttributes,
       });
     }
-
-    console.log(error.stack);
     res.status(500).json({
       message: "Something went wrong",
       status: "error",

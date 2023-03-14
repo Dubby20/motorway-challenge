@@ -10,7 +10,8 @@
     "docker": "docker-compose up --build",
     "docker:stop": "docker-compose down",
     "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha src/tests/index.js --timeout=50000 -r @babel/register --exit",
-    "watch": "nodemon"
+    "watch": "nodemon",
+    "db:test": "psql -U $POSTGRES_USER -d $POSTGRES_DB -a -f /app/scripts/motorway-test-backend/dump.sql"
   },
   "keywords": [],
   "author": "",
