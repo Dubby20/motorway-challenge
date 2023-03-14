@@ -7,13 +7,10 @@
     "build": "rm -rf dist && babel src -d dist",
     "start": "node dist/bin/www.js",
     "dev": "nodemon --exec babel-node src/bin/www.js",
-    "docker": "docker-compose up",
-    "docker:build": "docker-compose build",
-    "docker:app": "docker-compose up app",
+    "docker": "docker-compose up --build",
     "docker:stop": "docker-compose down",
     "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha src/tests/index.js --timeout=50000 -r @babel/register --exit",
-    "watch": "nodemon",
-    "dev1": "babel-node -- ./src/bin/www.js"
+    "watch": "nodemon"
   },
   "keywords": [],
   "author": "",
@@ -28,7 +25,6 @@
     "express": "^4.17.1",
     "joi": "^17.8.3",
     "morgan": "^1.9.1",
-    "node-cron": "^2.0.3",
     "nodemon": "^1.19.1",
     "pg": "^8.10.0",
     "pg-hstore": "^2.3.4",
