@@ -1,0 +1,51 @@
+{
+  "name": "motorway-takehome-backend",
+  "version": "1.0.0",
+  "description": "Install requirements:  - docker (https://docs.docker.com/get-docker/)",
+  "main": "src/bin/www.js",
+  "scripts": {
+    "build": "rm -rf dist && babel src -d dist",
+    "start": "node dist/bin/www.js",
+    "dev": "nodemon --exec babel-node src/bin/www.js",
+    "docker": "docker-compose up",
+    "docker:build": "docker-compose build",
+    "docker:app": "docker-compose up app",
+    "docker:stop": "docker-compose down",
+    "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha src/tests/index.js --timeout=50000 -r @babel/register --exit",
+    "watch": "nodemon",
+    "dev1": "babel-node -- ./src/bin/www.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "auto-bind": "^2.1.0",
+    "awilix": "^4.2.2",
+    "bluebird": "^3.5.5",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "joi": "^17.8.3",
+    "morgan": "^1.9.1",
+    "node-cron": "^2.0.3",
+    "nodemon": "^1.19.1",
+    "pg": "^8.10.0",
+    "pg-hstore": "^2.3.4",
+    "redis": "^2.8.0",
+    "sequelize": "^6.29.3",
+    "sequelize-cli": "^6.6.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.21.0",
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "cross-env": "^7.0.3",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0"
+  }
+}
