@@ -1,4 +1,3 @@
-import DocumentNotFound from './RepositoryErrors';
 import { Op } from "sequelize";
 
 /**

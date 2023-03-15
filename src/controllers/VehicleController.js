@@ -30,12 +30,14 @@ class VehicleController {
       );
       if (!vehicle) {
         return res.status(404).json({
+          status: "error",
           message: "Vehicle information not found",
         });
       }
       return res
         .status(200)
         .json({
+          status: "success",
           message: "Vehicle information retrieved successfully",
           data: vehicle,
         });
